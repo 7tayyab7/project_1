@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="d-flex align-items-center justify-content-between pt-40">
+        <div class="logo">
+          <img src="./img/Frame.png" alt="logo" style="max-width: 100%" />
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="nav-wrapper menu">
+          <ul class="d-flex navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#" class="nav-btn">Help</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="pt-120">
+        <div class="registration-wrapper">
+          <div
+            class="reg-header d-flex align-items-center justify-content-around"
+          >
+            <div>
+              <!-- <img src="./img/dis.png" width="15px" height="20px"/>
+            <span style="margin-left: 6px;">Accessibility</span> -->
+            </div>
+            <div class="heading">
+              <h2>Student Registration</h2>
+            </div>
+            <div class="lang">
+              <select id="language-preference">
+                <option value="english">Eng</option>
+                <option value="urdu">Urd</option>
+                <option value="sindhi">Sin</option>
+              </select>
+              <i class="fa fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="reg-form">
+            <div class="form-container">
+              <form>
+                <div class="form-group">
+                  <label for="full-name">Full Name <span>*</span></label>
+                  <input type="text" id="full-name" name="full-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="father-name">Father's Name <span>*</span></label>
+                  <input
+                    type="text"
+                    id="father-name"
+                    name="father-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="father-cnic">Father's CNIC <span>*</span></label>
+                  <input
+                    type="number"
+                    id="father-cnic"
+                    name="father-cnic"
+                    required
+                  />
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="form-group" style="width: 48%">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" />
+                  </div>
+                  <div class="form-group" style="width: 48%">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="form-group" style="width: 48%">
+                    <label for="contact-number"
+                      >Contact Number <span>*</span></label
+                    >
+                    <input
+                      type="number"
+                      id="contact-number"
+                      name="contact-number"
+                      required
+                    />
+                  </div>
+                  <div class="form-group" style="width: 48%">
+                    <label for="disability-certificate"
+                      >Disability Certificate <span>*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="disability-certificate"
+                      name="disability-certificate"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="form-group" style="width: 48%">
+                    <label for="disability-status"
+                      >Disability Status <span>*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="disability-status"
+                      name="disability-status"
+                      required
+                    />
+                  </div>
+                  <div class="form-group" style="width: 48%">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="district">District</label>
+                  <input type="text" id="district" name="district" />
+                </div>
+                <div class="form-group">
+                  <label for="previous-education">Previous Education</label>
+                  <input
+                    type="text"
+                    id="previous-education"
+                    name="previous-education"
+                  />
+                </div>
+                <div
+                  class="form-group d-flex align-items-center justify-content-between flex-wrap gap-20"
+                >
+                  <button
+                    type="button"
+                    onclick="document.getElementById('file1').click()"
+                  >
+                    Upload Disability Certificate
+                  </button>
+                  <input
+                    type="file"
+                    id="file1"
+                    name="file1"
+                    style="display: none"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onclick="document.getElementById('file2').click()"
+                  >
+                    Upload Disability Certificate
+                  </button>
+                  <input
+                    type="file"
+                    id="file2"
+                    name="file2"
+                    style="display: none"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onclick="document.getElementById('file3').click()"
+                  >
+                    Upload Picture (200kb)
+                  </button>
+                  <input
+                    type="file"
+                    id="file3"
+                    name="file3"
+                    style="display: none"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onclick="document.getElementById('file4').click()"
+                  >
+                    Upload B Form/Birth Certificate
+                  </button>
+                  <input
+                    type="file"
+                    id="file4"
+                    name="file4"
+                    style="display: none"
+                    required
+                  />
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <button class="btn">Register</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
